@@ -1,0 +1,13 @@
+llm:
+  api_key: ""
+  base_url: ""
+  chat_model: ""
+  embedding_model: ""
+  temperature: 0.2
+  timeout: 60
+
+app:
+  watermark: ""
+  enable_deep_search: true
+  enable_multi_agent_trace: true
+  enable_vector_database: true
