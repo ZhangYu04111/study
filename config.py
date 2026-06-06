@@ -30,9 +30,9 @@ def load_yaml():
 
 SETTINGS = load_yaml()
 LLM = SETTINGS.get("llm", {})
-OPENAI_API_KEY = LLM.get("api_key", "") or (os.environ.get("DASHSCOPE_API_KEY") if os.environ.get("DASHSCOPE_API_KEY") else "")
-OPENAI_BASE_URL = LLM.get("base_url", "https://www.dmxapi.cn/v1")
-CHAT_MODEL = LLM.get("chat_model", "gpt-5-mini")
+OPENAI_API_KEY = LLM.get("api_key", "") or (os.environ.get("OPENAI_API_KEY") if os.environ.get("OPENAI_API_KEY") else "")
+OPENAI_BASE_URL = LLM.get("base_url", "")
+CHAT_MODEL = LLM.get("chat_model", "")
 EMBEDDING_MODEL = LLM.get("embedding_model", "")
 TEMPERATURE = float(LLM.get("temperature", 0.2))
 TIMEOUT = int(LLM.get("timeout", 60))
